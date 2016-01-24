@@ -135,7 +135,7 @@ function datestournante($delai_en_jours=365){
 
     // Enregistrement du jour dans date.nkm
 
-      if ( $date_suivante == (date_format($today, 'd-m-Y')) ) {
+      if ( $date_suivante <= (date_format($today, 'd-m-Y')) ) {
         $debut_cycle = $date_suivante ;
       }
 
