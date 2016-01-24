@@ -20,6 +20,7 @@ Le return est un tableau numéroté, les paramètres ne sont pas vraiment necess
 UTILISATION DANS LA FONCTION D'UNE CLASS "repos" pour stylisé les repos
  
 **function datestournante**
+
 A mon avis les plus grosses ameliorations sont de ce coté a faire.
 cette fonction permet juste de mettre les jours dans un tableau numéroté avec comme parametre la durée du tableau en nombre de jour qui par defaut est a 365 jours comme celui de la fonction tournante.
 
