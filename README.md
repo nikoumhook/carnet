@@ -4,9 +4,9 @@ _______________________
 Realisation de nikoumhook pour maografyst c'est mon premier vrai travail en php donc je me doute que des amelioration il peut y en avoir des centaines, je reviendrais dessus afin de l'ameliorer et si un passionné veut l'utiliser et l'ameliorer celui-ci pourrait m'aider pour mon apprentissage.
 
 ## fonctionnement :
-________________
 
-**function tournante**
+
+**function *tournante***
 
 celle-ci permet de fabriquer le rythme des tourantes donc adaptable en fonction de votre rythme.
  > - ici 5*(jour travaillé)* / 3*(jours de repos)* ; 5/3 ; 5/4) ; donc sur 3 tournantes differentes.
@@ -19,7 +19,7 @@ Le return est un tableau numéroté, les paramètres ne sont pas vraiment necess
 
 UTILISATION DANS LA FONCTION D'UNE CLASS "repos" pour stylisé les repos
  
-**function datestournante**
+**function *datestournante***
 
 A mon avis les plus grosses ameliorations sont de ce coté a faire.
 cette fonction permet juste de mettre les jours dans un tableau numéroté avec comme parametre la durée du tableau en nombre de jour qui par defaut est a 365 jours comme celui de la fonction tournante.
@@ -41,7 +41,6 @@ dans les 2 fonctions la variable pour la durée est identique afin de pouvoir la
 
 
 ## Mise en place du tableau
-________________________
 
 
 comme vu ci-dessus la variable '$delai_en_jours' permet de modifier la durée du tableau
