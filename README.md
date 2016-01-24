@@ -1,9 +1,9 @@
-CARNET DE TOURNANTE 5x8
+# CARNET DE TOURNANTE 5x8
 _______________________
 
 Realisation de nikoumhook pour maografyst c'est mon premier vrai travail en php donc je me doute que des amelioration il peut y en avoir des centaines, je reviendrais dessus afin de l'ameliorer et si un passionné veut l'utiliser et l'ameliorer celui-ci pourrait m'aider pour mon apprentissage.
 
-fonctionnement :
+## fonctionnement :
 ________________
 ________________
 
@@ -39,7 +39,7 @@ DES CLASS son directement créée dans la boucle :
 dans les 2 fonctions la variable pour la durée est identique afin de pouvoir la modifier a une seul endroit.
 
 
-Mise en place du tableau
+## Mise en place du tableau
 ________________________
 ________________________
 
