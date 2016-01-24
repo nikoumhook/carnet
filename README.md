@@ -5,14 +5,13 @@ Realisation de nikoumhook pour maografyst c'est mon premier vrai travail en php 
 
 ## fonctionnement :
 ________________
-________________
 
 ** function tournante **
 celle-ci permet de fabriquer le rythme des tourantes donc adaptable en fonction de votre rythme.
- > ici 5*(jour travaillé)* / 3*(jours de repos)* ; 5/3 ; 5/4) ; donc sur 3 tournantes differentes.
- > Matin, Aprés-Midi, Aprés-Midi, Nuit, Nuit
- > Matin, Matin, Aprés-Midi, Nuit, Nuit
- > Matin, Matin, Aprés-Midi, Aprés-Midi, Nuit
+ > - ici 5*(jour travaillé)* / 3*(jours de repos)* ; 5/3 ; 5/4) ; donc sur 3 tournantes differentes.
+ > - **Matin, Aprés-Midi, Aprés-Midi, Nuit, Nuit**
+ > - **Matin, Matin, Aprés-Midi, Nuit, Nuit**
+ > - **Matin, Matin, Aprés-Midi, Aprés-Midi, Nuit**
  
 Le return est un tableau numéroté, les paramètres ne sont pas vraiment necessaire pour le carnet mais utilisé sur un autre projet le premier etant le jour sur lequel ont commence la tournante (utilisé pour callé les equipes dans le carnet), et le second la durée du tableau en nombre de jour qui par defaut est a 365 jours.
 
@@ -40,7 +39,6 @@ dans les 2 fonctions la variable pour la durée est identique afin de pouvoir la
 
 
 ## Mise en place du tableau
-________________________
 ________________________
 
 
