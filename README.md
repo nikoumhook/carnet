@@ -52,3 +52,6 @@ $Equipe_n = tournante( #ICI# ,$delai_en_jours);
 ont fabrique la boucle du tableau en incrementant la valeur des arrays.
 
 >je pense que l'on peut caller les equipe avec modifiant directement les arrays mais dans ma premiere version du carnet j'avais realisé une bidouille du genre ce qui faisait que le tableau etait mal structuré les colones n'avais pas toute la même taille etc... c'est pour sa que j'ai ajouté ce parametre dans la fonction tournante.
+
+
+http://maozoo.fr/carnet
