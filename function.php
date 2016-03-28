@@ -134,8 +134,10 @@ function datestournante($delai_en_jours=365){
       $today_totime = strtotime (date_format($today, 'd-m-Y'));
 
     // Enregistrement du jour dans date.nkm
+      $obj_date_suivante = new DateTime($date_suivante) ;
+      $obj_today = new DateTime(date_format($today, 'd-m-Y')) ;
 
-      if ( $date_suivante <= (date_format($today, 'd-m-Y')) ) {
+    if ( $obj_date_suivante < $obj_today ) {
         $debut_cycle = $date_suivante ;
       }
 
