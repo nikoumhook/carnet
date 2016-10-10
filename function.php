@@ -12,21 +12,21 @@ function tournante($day=1,$delai_en_jours=365){
 
   while ($count <= $delai_en_jours){
                 if ($day <= 1 || $day == 9 || $day == 10 || $day == 17 || $day == 18){  $jour_de_taff[] = $matin;
-                                 $day = 2 ;
-                                 $count ++ ;
-                              }
+                      $day = 2 ;
+                      $count ++ ;
+                }
                 elseif ($day == 2 || $day == 3 || $day == 11 || $day == 19 || $day == 20){  $jour_de_taff[] = $aprem;
-                                     $day ++ ;
-                                     $count ++ ;
-                                  }
+                      $day ++ ;
+                      $count ++ ;
+                }
                 elseif ($day == 4 || $day == 5 || $day == 12 || $day == 13 || $day == 21){  $jour_de_taff[] = $nuit;
-                                     $day ++ ;
-                                     $count ++ ;
-                                  }
+                      $day ++ ;
+                      $count ++ ;
+                }
                 elseif ($day == 6 || $day == 7 || $day == 8 || $day == 14 || $day == 15 || $day == 16 || $day == 22 || $day == 23 || $day == 24 || $day == 25){$jour_de_taff[] = $repos ;
-                                   $day ++ ;
-                                   $count ++ ;
-                                  }
+                       $day ++ ;
+                       $count ++ ;
+                }
                 elseif ($day > 25){$day = $day % 25;
                 }
                 else {    echo "il y a un probleme.";  }
