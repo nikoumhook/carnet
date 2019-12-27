@@ -1,0 +1,35 @@
+<div class="equipe">
+    <h1 class="txtcenter">EQUIPE {{equipe}}</h1>
+    <table class="center">
+        <tr ng-repeat="poste in tournantes">
+                    <!-- // pour un peut de graphisme equipe precedente a mettre en opacité -->
+                    <!-- <td ng-switch="equipe">
+                    <span ng-switch-when="2">1 : {{poste.equipe1}}</span>
+                    <span ng-switch-when="3">2 : {{poste.equipe2}}</span>
+                    <span ng-switch-when="4">3 : {{poste.equipe3}}</span>
+                    <span ng-switch-when="5">4 : {{poste.equipe4}}</span>
+                    <span ng-switch-when="1">5 : {{poste.equipe5}}</span>
+                </td> -->
+                <td>{{poste.date}}</td>
+                <td ng-switch="equipe">
+                    <span ng-switch-when="1">{{poste.equipe1}}</span>
+                    <span ng-switch-when="2">{{poste.equipe2}}</span>
+                    <span ng-switch-when="3">{{poste.equipe3}}</span>
+                    <span ng-switch-when="4">{{poste.equipe4}}</span>
+                    <span ng-switch-when="5">{{poste.equipe5}}</span>
+                </td>
+                <!-- // pour un peut de graphisme equipe suivante a mettre en opacité -->
+                <!-- <td ng-switch="equipe">
+                <span ng-switch-when="5">1 : {{poste.equipe1}}</span>
+                <span ng-switch-when="1">2 : {{poste.equipe2}}</span>
+                <span ng-switch-when="2">3 : {{poste.equipe3}}</span>
+                <span ng-switch-when="3">4 : {{poste.equipe4}}</span>
+                <span ng-switch-when="4">5 : {{poste.equipe5}}</span>
+            </td> -->
+        </tr>
+    </table>
+</div>
+
+<div class="flex-container">
+    <input class="center"  ng-change="change()" type="number" name="input" ng-model="lengthCal" min="10" max="730" required>
+</div>

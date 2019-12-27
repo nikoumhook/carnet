@@ -1,0 +1,24 @@
+<div class="carnetView">
+    <h1 class="txtcenter">CARNET OI</h1>
+    <table class="table">
+        <thead>
+            <th><span class="noOnSmall">Date</span></th>
+            <th>E<span class="noOnSmall">quipe </span>1</th>
+            <th>E<span class="noOnSmall">quipe </span>2</th>
+            <th>E<span class="noOnSmall">quipe </span>3</th>
+            <th>E<span class="noOnSmall">quipe </span>4</th>
+            <th>E<span class="noOnSmall">quipe </span>5</th>
+        </thead>
+        <tr ng-repeat="poste in tournantes">
+            <td>{{poste.date}}</td>
+            <td>{{poste.equipe1 | uppercase}}</td>
+            <td>{{poste.equipe2 | uppercase}}</td>
+            <td>{{poste.equipe3 | uppercase}}</td>
+            <td>{{poste.equipe4 | uppercase}}</td>
+            <td>{{poste.equipe5 | uppercase}}</td>
+        </tr>
+    </table>
+</div>
+<div class="flex-container">
+    <input class="center"  ng-change="change()" type="number" name="input" ng-model="lengthCal" min="10" max="730" required>
+</div>
