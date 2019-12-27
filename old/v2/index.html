@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Carnet V2.1.1</title>
+            <script src="https://code.angularjs.org/1.6.0-rc.2/angular.min.js"></script>
+            <script src="https://code.angularjs.org/1.6.0-rc.2/angular-route.min.js"></script>
+            <script src="https://code.angularjs.org/1.6.0-rc.2/angular-touch.min.js"></script>
+            <script src="https://code.angularjs.org/1.6.0-rc.2/angular-animate.min.js"></script>
+            <!-- date picker -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+            <script src="ext/angular-moment-picker.min.js"></script>
+            <script src="js/app.js"></script>
+
+
+            <!-- css -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.css">
+            <link rel="stylesheet" href="ext/angular-moment-picker.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body ng-app="carnetTournante">
+        <div ng-controller="dateController">
+            <div class="smallBtnMenu" ng-click="menu = !menu" ng-swipe-right="menu = false">
+                <span ng-if="menu">FERMER</span>
+                <span ng-if="!menu">MENU</span>
+            </div>
+
+            <nav ng-show="menu" >
+                <ul class="">
+                    <li><a href="#!/">Accueil</a></li>
+                    <li><a href="#!/eq/1">Equipe 1</a></li>
+                    <li><a href="#!/eq/2">Equipe 2</a></li>
+                    <li><a href="#!/eq/3">Equipe 3</a></li>
+                    <li><a href="#!/eq/4">Equipe 4</a></li>
+                    <li><a href="#!/eq/5">Equipe 5</a></li>
+                </ul>
+                <div>
+                    <ul>
+                        <li class="right"><i class="fa fa-calendar"
+                            aria-hidden="true"
+                            ng-model="ctrl.input"
+                            placeholder="choisi un jour..."
+                            locale="fr"
+                            max-view="month"
+                            autoclose="true"
+                            format=" LL"
+                            moment-picker="ctrl.input"
+                            ng-change="datechoose(ctrl.input)" ></i>
+                        </li>
+                        <li class="right"><i class="fa fa-cog" aria-hidden="true"></i></li>
+                        <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+</div>
+
+    <div ng-view class="view" ></div>
+
+        <script>
+        var app = angular.module('carnetTournante',[
+            'ngRoute',
+            'ngAnimate',
+            'moment-picker',
+            'ngTouch'
+        ]);
+
+        app.config(function($routeProvider){
+            $routeProvider
+                .when('/',{
+                    templateUrl: 'views/home.html',
+                    controller:'dateController'
+                })
+                .when('/eq/:id',{
+                    templateUrl: 'views/eq.html',
+                    controller:'dateController'
+                })
+                .when('/date/:date',{
+                    templateUrl: 'views/choose.html',
+                    controller:'chooseDate'
+                })
+                .otherwise({redirectTo: '/'});
+        });
+
+        app.controller('dateController',function($scope,$routeParams,$window){
+            $scope.lengthCal = 35;
+            $scope.datepicker ;
+            $scope.tournantes = viewCal($scope.lengthCal);
+            $scope.equipe = $routeParams.id ;
+            $scope.menu = false;
+            $scope.change = function(){
+                $scope.tournantes = viewCal($scope.lengthCal);
+            };
+
+            $scope.datechoose = function(date){
+                datev = date._d;
+                // le plus 1 est pou corriger un bug qui fait que sa selectionne le mois d'avant
+                datev = ((datev.getMonth()+1) + ' ' + datev.getDate() + ' ' + datev.getFullYear());
+                fulldate = "#!/date/"+ datev ;
+                window.location = (fulldate);
+            };
+            // console.log($window.location.hash);
+
+        });
+        app.controller('chooseDate',function($scope,$routeParams){
+            $scope.tournante = searchDate($routeParams.date);
+        });
+
+        </script>
+    </body>
+</html>
